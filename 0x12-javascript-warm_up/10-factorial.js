@@ -1,20 +1,15 @@
 #!/usr/bin/node
-
-/*
-    A script that computes and prints a factorial.
-
-    prototype: function factorial(n)
-    The first argument is an integer used for computing the factorial
-    Factorial of NaN is 1
-    */
-
-const factorial = (n) => {
-  if (isNaN(n)) {
-    return 1;
-  }
-  
-  if (n === 0 || n === 1) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
-  }
+/**
+ *  * factorial - Computes the factorial of a number.
+ *   * @param {Number} num - The number.
+ *    *
+ *     * @returns The factorial of the number.
+ *      */
+function factorial (num) {
+	  if (Number.isNaN(num) || (num <= 0)) {
+	    return 1;
+         } else {
+	   return num * factorial(num - 1);
+         }
+}
+console.log(factorial(Number.parseInt(process.argv[2])));
