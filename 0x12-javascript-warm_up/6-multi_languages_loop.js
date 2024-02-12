@@ -6,7 +6,12 @@
     The second line: "Python is cool"
     The third line: "Jvascript is Amazing"
 */
-const myArray = ['C is fun', 'python is cool', 'Javascript is Amazing'];
-for (let i = 0; i < myArray.length; i++) {
-   console.log(myArray[i]);
+const texts = [
+	  'C is fun',
+	  'Python is cool',
+	  'JavaScript is amazing'
+];
+
+for (let i = 0; i < texts.length; i++) {
+	  console.log(texts[i]);
 }
