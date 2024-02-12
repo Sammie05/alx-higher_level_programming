@@ -1,16 +1,20 @@
 #!/usr/bin/node
-
-/*
-    A script that prints a square
-
-    If the first argument can't be converted to an integer, print "Missing size"
-    you must use the character X to print the square
-*/
-const sizeArg = process.argv[2];
-const size = parseInt(sizeArg);
-
-if (!isNaN(size)) {
-   for (let i = 0; i < size; i++) {console.log('X'.represent(size)); }
-}  else {
-   console.log('Missing size');
+/**
+ *  * square - Prints a square with 'X'.
+ *   * @param {Number} size - The size of the square.
+ */
+function square (size) {
+  if (Number.isNaN(size)) {
+    console.log('Missing size');
+   } else if (size >= 0) {
+     const row = new Array(size);
+     for (let i = 0; i < size; i++) {
+       row.push('X');
+     }
+     let rows = new Array(size);
+      rows = rows.fill(row.join(''), 0, size);
+      console.log(rows.join('\n'));
+    }
 }
+
+square(Number.parseInt(process.argv[2]));
