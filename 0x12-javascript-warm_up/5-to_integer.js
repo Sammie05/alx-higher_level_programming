@@ -7,11 +7,6 @@
     If the argument can't be converted to an integer, print "Not a number
 */
 
-const arg = process.argv[2];
-const num = parseInt(arg);
+const num = Number.parseInt(process.argv[2]);
 
-if (isNaN(num)) {
-   console.log('Not a number');
-} else {
-  console.log('Not number: ${num}');
-}
+console.log(Number.isNaN(num) ? 'Not a number' : 'My number: ' + num);
