@@ -1,7 +1,4 @@
 #!/usr/bin/node
-
-// a script that concats 2 files.
-
 let srcA = process.argv[2];
 let srcB = process.argv[3];
 let dest = process.argv[4];
