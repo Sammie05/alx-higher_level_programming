@@ -1,4 +1,5 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+# comments
 str = "Holberton School"
-print(str * 3)
-print(f"{str[:9]}")
+print(str*3)
+print(str[0:9])
